@@ -321,3 +321,11 @@ footer span a {
 footer span a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 800px) {
+  #education div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+}
