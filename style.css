@@ -321,7 +321,7 @@ footer span a {
 footer span a:hover {
   text-decoration: underline;
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   #education div {
     display: flex;
     width: 100%;
