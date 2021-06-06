@@ -84,20 +84,122 @@ main {
   top: 70px;
 }
 #home {
-  margin: auto;
-  display: flex;
-  float: left;
   align-items: center;
   font-size: 23px;
   justify-content: space-around;
-  padding: 100px 0px;
+  padding: 100px;
+}
+@media screen and (min-width: 900px) {
+  #home {
+    height: 566px;
+  }
 }
 #home img {
-  width: 300px;
-  margin-right: 1%;
+  float: left;
+  width: 350px;
+  margin-right: 65px;
+
   clip-path: circle();
-  display: inline;
 }
 #home .name {
   font-size: 35px;
+}
+#home p {
+  transform: translateY(100px);
+}
+
+#about {
+  /* height: 500px; */
+  font-size: 23px;
+  background: rgb(238, 235, 235);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+}
+#about h3 {
+  color: rgb(151, 22, 12);
+}
+#about div {
+  width: 50%;
+  /* height: 100px; */
+}
+
+.flip-card {
+  background-color: transparent;
+  /* width: 80%; */
+  width: 450px;
+  height: 450px;
+  perspective: 1000px;
+  padding: 30px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: whitesmoke;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flip-card-back {
+  background-color: whitesmoke;
+  color: black;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#education {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+}
+#education h3 {
+  color: rgb(151, 22, 12);
+
+  font-size: 35px;
+}
+/* #education > div {
+  display: inline;
+  /* width: 100%; */
+/* justify-content: space-around;
+} */
+.edu {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+/* #education > div {
+  display: inline-block;
+} */
+
+@media screen {
 }
